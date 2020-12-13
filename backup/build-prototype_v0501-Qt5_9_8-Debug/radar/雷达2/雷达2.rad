@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components width="5000" height="5000">
+    <Arrs>
+        <arrow end_item_id="{ddd1a233-79c8-40ef-8401-8017bb965b4d}" id="{e5a5133c-b441-4ac7-9e38-d69116bad78c}" start_item_id="{f16021f8-dd4d-40b6-9c29-ce029369c159}">
+            <color>#000000</color>
+            <start_port>{6bff0471-35b6-462e-995c-655a69f27b22}</start_port>
+            <end_port>{3f308a5c-53d3-4ccc-acfa-70c095b734ca}</end_port>
+        </arrow>
+    </Arrs>
+    <Items>
+        <SIM pos_y="2486" id="{f16021f8-dd4d-40b6-9c29-ce029369c159}" pos_x="1909">
+            <color>#a0a0a4</color>
+            <call>Simulate</call>
+            <port dataType="" isoutput="0" name="SIM" port_type="1">{63a50336-fb95-4bf2-b431-f561ee1d649c}</port>
+            <port dataType="" isoutput="0" name="仿真组件" port_type="2">{29966ac8-ee3a-431b-9f57-5a5a6af7cc94}</port>
+            <port dataType="MSG_Q_ID" isoutput="1" name="gMsgSimQ" port_type="0">{6bff0471-35b6-462e-995c-655a69f27b22}</port>
+        </SIM>
+        <DPC pos_y="2509" id="{ddd1a233-79c8-40ef-8401-8017bb965b4d}" pos_x="2237">
+            <color>#a0a0a4</color>
+            <call>PulseCompress</call>
+            <port dataType="" isoutput="0" name="DPC" port_type="1">{8cfd3629-54ae-42e8-b8b1-859f1034c155}</port>
+            <port dataType="" isoutput="0" name="脉冲压缩" port_type="2">{b7bf443c-f3f2-465d-8669-18b9d6aced5a}</port>
+            <port dataType="MSG_Q_ID" isoutput="1" name="gMsgDpcQ" port_type="0">{68301133-d1ab-4533-86cf-54c51ec68538}</port>
+            <port dataType="MSG_Q_ID" isoutput="0" name="gMsgSimQ" port_type="0">{3f308a5c-53d3-4ccc-acfa-70c095b734ca}</port>
+        </DPC>
+    </Items>
+</components>

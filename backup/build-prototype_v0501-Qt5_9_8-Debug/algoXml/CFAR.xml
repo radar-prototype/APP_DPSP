@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>恒虚警率</CN_Name>
+        <ID>{eb71a85c-e22f-4005-8191-1da1fe33987c}</ID>
+        <Name>CFAR</Name>
+        <Path>E:/MasterGraduateStudent/Laboratory/723/Projects_dir/20200629/build-prototype_v0501-Qt5_9_8-Debug/algoXml</Path>
+        <Time>Wed Nov 11 11:01:57 2020 GMT</Time>
+        <callFunction>CFAR</callFunction>
+    </Information>
+    <Description>恒虚警检测是指雷达系统在保持虚警概率恒定条件下对接收机输出的信号与噪声做判别以确定目标信号是否存在的技术</Description>
+    <Parameter>
+        <cMainBeamCnt describe="主波束数量" isoutput="2" type="int" value="4"/>
+        <gMsgSDAEQ describe="发送给和差测角的输出队列" isoutput="1" type="MSG_Q_ID" value=""/>
+        <gMsgSend1 describe="数据接收队列" isoutput="0" type="MSG_Q_ID" value=""/>
+        <num_thread describe="处理线程数量" isoutput="2" type="int" value="3"/>
+        <sCPINum describe="CPI数量" isoutput="2" type="int" value="32"/>
+        <sMaxRgeCell describe="最大量程范围" isoutput="2" type="int" value="4096"/>
+    </Parameter>
+</Plugins>

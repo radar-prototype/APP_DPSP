@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>恒虚警率</CN_Name>
+        <ID>{b544375c-8299-4a21-9be8-a80edb6d6894}</ID>
+        <Name>CFAR</Name>
+        <Path>/home/kylin/xidian-723/20201104/20201114/build-prototype_v0501-unknown-Debug/radar/雷达12/room/algoXml</Path>
+        <Time>周六 11月 14 16:46:10 2020</Time>
+        <callFunction>CFAR</callFunction>
+    </Information>
+    <Description>恒虚警检测是指雷达系统在保持虚警概率恒定条件下对接收机输出的信号与噪声做判别以确定目标信号是否存在的技术</Description>
+    <Parameter>
+        <cMainBeamCnt describe="主波束数量" isoutput="2" type="int" value="4"/>
+        <gMsgSDAEQ describe="发送给和差测角的输出队列" isoutput="1" type="MSG_Q_ID" value=""/>
+        <gMsgSend1 describe="数据接收队列" isoutput="0" type="MSG_Q_ID" value=""/>
+        <num_thread describe="处理线程数量" isoutput="2" type="int" value="3"/>
+        <sCPINum describe="CPI数量" isoutput="2" type="int" value="32"/>
+        <sMaxRgeCell describe="最大量程范围" isoutput="2" type="int" value="4096"/>
+    </Parameter>
+</Plugins>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>仿真组件</CN_Name>
+        <ID>{f16021f8-dd4d-40b6-9c29-ce029369c159}</ID>
+        <Name>SIM</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/雷达2/room/algoXml</Path>
+        <Time>Sat Oct 24 12:31:22 2020</Time>
+        <callFunction>Simulate</callFunction>
+    </Information>
+    <Description>仿真目标仿真目标仿真目标仿真目标仿真目标仿真目标</Description>
+    <Parameter>
+        <gMsgSimQ describe="仿真对象的数据列表" type="MSG_Q_ID" value="" isoutput="1"/>
+        <len_block describe="参数描述" type="unsigned int" value="" isoutput="2"/>
+        <nMalLen describe="参数描述" type="unsigned int" value="" isoutput="2"/>
+        <num_block describe="参数描述" type="unsigned int" value="" isoutput="2"/>
+        <num_thread describe="参数描述" type="unsigned int" value="" isoutput="2"/>
+        <pMalBuf describe="参数描述" type="char*" value="" isoutput="2"/>
+        <sMaxRgeCell describe="参数描述" type="unsigned int" value="" isoutput="2"/>
+    </Parameter>
+</Plugins>

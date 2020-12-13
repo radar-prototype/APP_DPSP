@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DDS>
+    <DCPS>
+        <IP>192.168.1.2</IP>
+        <port>123456</port>
+    </DCPS>
+    <Algo>
+        <count>1</count>
+        <EveAlgo>
+            <AlgoID>SIM{de2d17c7-dadd-468d-8d7e-6853da7116cc}</AlgoID>
+            <nextAlgoID>DPC{2770ee93-53ba-47a3-ab03-949c20fec552}</nextAlgoID>
+        </EveAlgo>
+    </Algo>
+</DDS>

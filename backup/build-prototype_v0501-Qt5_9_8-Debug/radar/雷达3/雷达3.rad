@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components height="5000" width="5000">
+    <Arrs>
+        <arrow start_item_id="{a25a900f-4ce0-43e8-a520-34cb89202797}" id="{a6778e67-2422-4f09-91c2-63d02f507b4d}" end_item_id="{bb2a40bc-b43a-4222-8f97-a6ae66e1795c}">
+            <color>#000000</color>
+            <start_port>{3351c906-dd5d-444a-a093-a9b625833393}</start_port>
+            <end_port>{96d79059-f2ad-4cac-b574-a8fc0284b2cd}</end_port>
+        </arrow>
+        <arrow start_item_id="{bb2a40bc-b43a-4222-8f97-a6ae66e1795c}" id="{61632df5-683e-400b-910b-f00bcc119356}" end_item_id="{86ec6cc8-4cbb-4c27-9fb9-d00baedd9203}">
+            <color>#000000</color>
+            <start_port>{73cc8e79-2ad2-41b3-8d60-44b256547d24}</start_port>
+            <end_port>{bb91ea8f-e332-4cdc-88b7-4373f7a2de6a}</end_port>
+        </arrow>
+        <arrow start_item_id="{86ec6cc8-4cbb-4c27-9fb9-d00baedd9203}" id="{85b53f7d-5b0a-46cb-98ac-299410060227}" end_item_id="{0d2146bd-699b-4788-802a-556073a326a5}">
+            <color>#000000</color>
+            <start_port>{cbcd45ca-46a6-425f-8975-77c70bb48aa1}</start_port>
+            <end_port>{da77d632-2c53-4745-bb38-5fdadfe39db5}</end_port>
+        </arrow>
+    </Arrs>
+    <Items>
+        <FDPC id="{bb2a40bc-b43a-4222-8f97-a6ae66e1795c}" pos_y="2605" pos_x="2082">
+            <color>#a0a0a4</color>
+            <call>frequencyDomainPulseCompression(npj_out, echo_pulse, echo_fft, coeff_fft, pc0, pc, pc_fft, echo_plan, pc_plan);&#xd;
+        writeData("./data/FDPC.txt",pc);</call>
+            <port isoutput="0" port_type="1" name="FDPC" dataType="">{6d38a890-c09a-4f00-bd5b-15faecba0309}</port>
+            <port isoutput="0" port_type="2" name="脉冲压缩" dataType="">{6741d8f1-df5a-46e7-b89a-b2794994c070}</port>
+            <port isoutput="0" port_type="0" name="echo" dataType="vsip_cmview_f*">{96d79059-f2ad-4cac-b574-a8fc0284b2cd}</port>
+            <port isoutput="1" port_type="0" name="pc" dataType="vsip_cmview_f*">{73cc8e79-2ad2-41b3-8d60-44b256547d24}</port>
+        </FDPC>
+        <OUTPUT id="{0d2146bd-699b-4788-802a-556073a326a5}" pos_y="2654" pos_x="2846">
+            <color>#a0a0a4</color>
+            <call>writeData_1("./data/OUTPUT.txt", cfar_result);&#xd;
+        count += (double)(t2.tv_sec * 1e6 + t2.tv_usec) / 1000.0 - (double)(t1.tv_sec * 1e6 + t1.tv_usec) / 1000.0; //time</call>
+            <port isoutput="0" port_type="1" name="OUTPUT" dataType="">{382834d2-0ef8-409c-aad8-6f6a4d0319ea}</port>
+            <port isoutput="0" port_type="2" name="输出组件" dataType="">{178e0178-6212-4611-9335-a5b94196e620}</port>
+            <port isoutput="0" port_type="0" name="result" dataType="vsip_mview_f*">{da77d632-2c53-4745-bb38-5fdadfe39db5}</port>
+        </OUTPUT>
+        <INPUT id="{a25a900f-4ce0-43e8-a520-34cb89202797}" pos_y="2336" pos_x="1779">
+            <color>#a0a0a4</color>
+            <call>readData("./data/INPUT.txt", echo, i * SampleNumber * PulseNumber, 0);&#xd;
+        gettimeofday(&amp;t1, NULL);</call>
+            <port isoutput="0" port_type="1" name="INPUT" dataType="">{10c430a9-7f0d-4145-9ee7-f41615ea847d}</port>
+            <port isoutput="0" port_type="2" name="输入组件" dataType="">{0fd56b59-aa4f-42cb-891d-c8ad1d34b471}</port>
+            <port isoutput="1" port_type="0" name="echo" dataType="vsip_cmview_f*">{3351c906-dd5d-444a-a093-a9b625833393}</port>
+        </INPUT>
+        <TEST2 id="{86ec6cc8-4cbb-4c27-9fb9-d00baedd9203}" pos_y="2384" pos_x="2386">
+            <color>#a0a0a4</color>
+            <call>test_func</call>
+            <port isoutput="0" port_type="1" name="TEST2" dataType="">{c03dc232-d092-41c2-9107-9ade8fa4a2c7}</port>
+            <port isoutput="0" port_type="2" name="测试" dataType="">{5fc7e1b6-490a-4eb5-8df7-6d12a1cb5da4}</port>
+            <port isoutput="1" port_type="0" name="cfar_result" dataType="vsip_mview_f*">{cbcd45ca-46a6-425f-8975-77c70bb48aa1}</port>
+            <port isoutput="0" port_type="0" name="pc" dataType="vsip_cmview_f*">{bb91ea8f-e332-4cdc-88b7-4373f7a2de6a}</port>
+        </TEST2>
+    </Items>
+</components>

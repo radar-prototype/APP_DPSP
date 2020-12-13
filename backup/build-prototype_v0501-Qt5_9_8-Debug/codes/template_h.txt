@@ -1,0 +1,50 @@
+#ifndef _[DPCOMPNAMEALLUPPERCASE]_H_
+#define _[DPCOMPNAMEALLUPPERCASE]_H_
+#include "Common.h"
+#include "MsgQueue.h"
+/***********************************************
+ *[DPCOMPNAMEALLCAPTICAL] VERSION: _VERSION_	
+ *CREATEDATE: _CREATEDATE_
+ *----------------------------------------------
+ *名称: _NAME_
+ *功能: _FUNCTION_
+ *作者: _AUTHOR_
+ *更新时间: _DATETIME_
+ ***********************************************/
+class [DPCOMPNAMEALLCAPTICAL] : public Common
+{
+public :
+	//组件属性
+	RSPL_[DPCOMPNAMEUPPERCASE]_ICOMP pCom_[DPCOMPNAMELOWERCASE];
+
+	//组件接收线程
+	pthread_t tidp_[DPCOMPNAMELOWERCASE];
+
+	//组件处理线程  
+	pthread_t tidp_[DPCOMPNAMELOWERCASE]_thread[THREADNUM];
+
+	//组件的名字
+	string name;
+
+	//组件的ip
+	string ip;
+
+  //组件接收队列 --接收线程负责将数据取出放到内部队列 
+	static MSG_Q_ID gMsg[DPCOMPNAMECAPTICAL]QPre;
+
+	//组件内部队列 --处理线程负责将数据取出处理后发到下一组件的接收队列
+	static MSG_Q_ID gMsg[DPCOMPNAMECAPTICAL]QNow;
+
+	//初始化函数
+	void init();
+
+	//运行函数
+	void run();
+
+	void uninit();
+
+	static void*  receive_thread(void* args);//用户自己配置
+  
+	static void*  handle_thread(void* args); //也是自己配置
+};
+#endif //_[DPCOMPNAMEALLUPPERCASE]_H_

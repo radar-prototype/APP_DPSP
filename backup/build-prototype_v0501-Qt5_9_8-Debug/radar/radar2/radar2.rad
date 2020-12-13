@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components width="5000" height="5000">
+    <Arrs/>
+    <Items>
+        <DPC pos_x="1565" pos_y="2374" id="{ef01ba95-7538-4c76-a7c2-60bc15d0e808}">
+            <color>#a0a0a4</color>
+            <call>PulseCompress</call>
+            <port isoutput="0" port_type="1" dataType="" name="DPC">{6b28cf86-0345-4dc3-89c5-d4c9dcdf4388}</port>
+            <port isoutput="0" port_type="2" dataType="" name="脉冲压缩">{7b9bfc62-01ce-459b-9b76-f9570717d3ec}</port>
+            <port isoutput="1" port_type="0" dataType="MSG_Q_ID" name="gMsgDatQ">{e2b599f9-8993-4b9a-a296-03daed62b8c0}</port>
+            <port isoutput="0" port_type="0" dataType="MSG_Q_ID" name="gMsgSimQ">{72a86c2b-3930-47b5-a213-5e59039303fe}</port>
+        </DPC>
+    </Items>
+</components>

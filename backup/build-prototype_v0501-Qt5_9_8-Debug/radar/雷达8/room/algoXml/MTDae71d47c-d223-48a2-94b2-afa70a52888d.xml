@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>动目标检测</CN_Name>
+        <ID>{ae71d47c-d223-48a2-94b2-afa70a52888d}</ID>
+        <Name>MTD</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/雷达8/room/algoXml</Path>
+        <Time>Mon Aug 31 17:32:32 2020</Time>
+        <callFunction>movingTargetDetection(mtd, pc, buff, buff_fft, win, buff_plan, max, tempm);&#xd;
+        writeData_1("./data/MTD.txt",mtd);</callFunction>
+    </Information>
+    <Description>采用滤波器组分别滤出杂波与目标信息，因而能区别动目标和固定目标的信号检测技术。通过计算一维频谱的输出与噪声电平的比较识别动目标。</Description>
+    <Parameter>
+        <buff value="" describe="截取输入的每一个脉冲" type="vsip_cmview_f*" isoutput="2"/>
+        <buffPlan value="" describe="buff傅里叶变换" type="vsip_fftm_f*" isoutput="2"/>
+        <buff_fft value="" describe="buff傅里叶变换结果" type="vsip_cmview_f*" isoutput="2"/>
+        <max value="" describe="VSIP_MIN_SCALAR_F" type="vsip_scalar_f" isoutput="2"/>
+        <mtd value="" describe="输出,1*600 实数矩阵" type="vsip_mview_f*" isoutput="1"/>
+        <pc value="" describe="输入,16*600" type="vsip_cmview_f*" isoutput="0"/>
+        <temp value="" describe="比较大小的中间变量" type="vsip_scalar_f" isoutput="2"/>
+        <win value="" describe="用来和窗口函数点乘 汉明窗" type="vsip_mview_f*" isoutput="2"/>
+    </Parameter>
+</Plugins>

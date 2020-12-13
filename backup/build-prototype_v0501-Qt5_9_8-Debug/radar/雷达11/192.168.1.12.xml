@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DDS>
+    <DCPS>
+        <IP>192.168.1.12</IP>
+        <port>123456</port>
+    </DCPS>
+    <Algo>
+        <count>6</count>
+        <EveAlgo>
+            <AlgoID>SIM{f39719dc-c72f-4a97-8808-ce8a2e71ad2b}</AlgoID>
+            <nextAlgoID>DPC{b64280f1-01a6-46b4-84b9-321806d7ba77}</nextAlgoID>
+        </EveAlgo>
+        <EveAlgo>
+            <AlgoID>DPC{b64280f1-01a6-46b4-84b9-321806d7ba77}</AlgoID>
+            <nextAlgoID>SLC{6b5bb46a-0746-451c-b5e1-2c89aeb68742}</nextAlgoID>
+        </EveAlgo>
+        <EveAlgo>
+            <AlgoID>SLC{6b5bb46a-0746-451c-b5e1-2c89aeb68742}</AlgoID>
+            <nextAlgoID>MTD{2d36ce26-ae86-4833-a44c-1051b658b38a}</nextAlgoID>
+        </EveAlgo>
+        <EveAlgo>
+            <AlgoID>MTD{2d36ce26-ae86-4833-a44c-1051b658b38a}</AlgoID>
+            <nextAlgoID>CFAR{e298c7df-9622-480d-832b-1ba7d0fa9680}</nextAlgoID>
+        </EveAlgo>
+        <EveAlgo>
+            <AlgoID>CFAR{e298c7df-9622-480d-832b-1ba7d0fa9680}</AlgoID>
+            <nextAlgoID>SDAE{9eba5449-d121-4a60-af90-8a7913350035}</nextAlgoID>
+        </EveAlgo>
+        <EveAlgo>
+            <AlgoID>SDAE{9eba5449-d121-4a60-af90-8a7913350035}</AlgoID>
+        </EveAlgo>
+    </Algo>
+</DDS>

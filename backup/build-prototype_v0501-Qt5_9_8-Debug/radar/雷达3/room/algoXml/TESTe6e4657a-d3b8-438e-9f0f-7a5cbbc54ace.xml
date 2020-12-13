@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>测试</CN_Name>
+        <ID>{e6e4657a-d3b8-438e-9f0f-7a5cbbc54ace}</ID>
+        <Name>TEST</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/雷达3/room/algoXml</Path>
+        <Time>Wed Sep 30 11:08:02 2020</Time>
+        <callFunction>test_func</callFunction>
+    </Information>
+    <Description>这个是打包成的子模型，供测试使用。</Description>
+    <Parameter>
+        <alpha value="" isoutput="" describe="alpha系数" type="int"/>
+        <buff value="" isoutput="" describe="截取输入的每一个脉冲" type="vsip_cmview_f*"/>
+        <buffPlan value="" isoutput="" describe="buff傅里叶变换" type="vsip_fftm_f*"/>
+        <buff_fft value="" isoutput="" describe="buff傅里叶变换结果" type="vsip_cmview_f*"/>
+        <cfar_result value="" isoutput="1" describe="恒虚警处理后的结果" type="vsip_mview_f*"/>
+        <max value="" isoutput="" describe="VSIP_MIN_SCALAR_F" type="vsip_scalar_f"/>
+        <mean_matrix value="" isoutput="" describe="平均矩阵" type="vsip_mview_f*"/>
+        <mtd value="" isoutput="" describe="mtd处理后的数据" type="vsip_mview_f*"/>
+        <pc value="" isoutput="0" describe="输入,16*600" type="vsip_cmview_f*"/>
+        <protect_number value="" isoutput="" describe="保护单元半径大小" type="int"/>
+        <reference_number value="" isoutput="" describe="涉及区域半径大小" type="int"/>
+        <temp value="" isoutput="" describe="中间变量" type="vsip_scalar_f"/>
+        <win value="" isoutput="" describe="用来和窗口函数点乘 汉明窗" type="vsip_mview_f*"/>
+    </Parameter>
+</Plugins>

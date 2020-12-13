@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>恒虚警率</CN_Name>
+        <ID>{a0ed340e-d2b4-4c9e-92ca-86165c43bbfb}</ID>
+        <Name>CFAR</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/雷达3/room/algoXml</Path>
+        <Time>Wed Sep 30 11:10:13 2020</Time>
+        <callFunction>constantFalseAlarmRate(cfar_result, mtd, protect_number, reference_number, alpha, mean_matrix, temp);&#xd;
+        gettimeofday(&amp;t2, NULL);&#xd;
+        printf("speed time is:%f(ms)\n", (double)(t2.tv_sec * 1e6 + t2.tv_usec) / 1000.0 - (double)(t1.tv_sec * 1e6 + t1.tv_usec) / 1000.0); //time&#xd;
+        writeData_1("./data/CFAR.txt", cfar_result);</callFunction>
+    </Information>
+    <Description>恒虚警检测是指雷达系统在保持虚警概率恒定条件下对接收机输出的信号与噪声做判别以确定目标信号是否存在的技术</Description>
+    <Parameter>
+        <alpha isoutput="2" describe="alpha系数" type="int" value=""/>
+        <cfar_result isoutput="1" describe="恒虚警处理后的结果" type="vsip_mview_f*" value=""/>
+        <mean_matrix isoutput="2" describe="平均矩阵" type="vsip_mview_f*" value=""/>
+        <mtd isoutput="0" describe="mtd处理后的数据" type="vsip_mview_f*" value=""/>
+        <protect_number isoutput="2" describe="保护单元半径大小" type="int" value=""/>
+        <reference_number isoutput="2" describe="涉及区域半径大小" type="int" value=""/>
+        <temp isoutput="2" describe="中间变量" type="vsip_scalar_f" value=""/>
+    </Parameter>
+</Plugins>

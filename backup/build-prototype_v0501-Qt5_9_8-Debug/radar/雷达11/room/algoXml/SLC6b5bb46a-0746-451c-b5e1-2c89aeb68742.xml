@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>副瓣对消</CN_Name>
+        <ID>{6b5bb46a-0746-451c-b5e1-2c89aeb68742}</ID>
+        <Name>SLC</Name>
+        <Path>/home/kylin/xidian-723/20201104/20201111/build-prototype_v0501-unknown-Debug/radar/雷达11/room/algoXml</Path>
+        <Time>周四 11月 12 12:40:23 2020</Time>
+        <callFunction>SidelobeCanceller</callFunction>
+    </Information>
+    <Description>副瓣对消技术是雷达抗有源压制式噪声干扰的一项重要措施,可以有效提高干扰环境下雷达最大探测距离。</Description>
+    <Parameter>
+        <cMainBeamCnt describe="主波束数量" isoutput="2" type="unsigned int" value="4"/>
+        <cSideBeamCnt describe="侧波束数量" isoutput="2" type="unsigned int" value="1"/>
+        <gMsgCSAQ describe="数据发送队列" isoutput="1" type="MSG_Q_ID" value=""/>
+        <gMsgDatQ describe="数据接收队列" isoutput="0" type="MSG_Q_ID" value=""/>
+        <num_sRgeCell describe="距离单元的数量" isoutput="2" type="unsigned int" value="200"/>
+        <num_thread describe="线程数量" isoutput="2" type="unsigned int" value="2"/>
+        <sCPINum describe="CPI数量" isoutput="2" type="unsigned int" value="32"/>
+        <sMaxRgeCell describe="最大量程单元" isoutput="2" type="unsigned int" value="4096"/>
+    </Parameter>
+</Plugins>

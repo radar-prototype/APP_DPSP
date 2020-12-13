@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>脉冲压缩</CN_Name>
+        <ID>{2da80ab9-a75b-4006-aba2-4873f851b522}</ID>
+        <Name>FDPC</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/雷达8/room/algoXml</Path>
+        <Time>Mon Aug 31 17:32:16 2020</Time>
+        <callFunction>frequencyDomainPulseCompression(npj_out, echo_pulse, echo_fft, coeff_fft, pc0, pc, pc_fft, echo_plan, pc_plan);&#xd;
+        writeData("./data/FDPC.txt",pc);</callFunction>
+    </Information>
+    <Description>指发射宽编码脉冲并对回波进行处理以获得窄脉冲，因此脉冲压缩雷达既保持了窄脉冲的高距离分辨力，又能获得宽脉冲的强检测能力。采用脉冲压缩后，在接收机的接收端信噪比有了明显的改善，进而可以在满足分辨率的基础上，提高雷达的作用距离</Description>
+    <Parameter>
+        <coeff_fft value="" describe="脉冲压缩系数的傅里叶变换结果" type="vsip_cmview_f*" isoutput="2"/>
+        <echo value="" describe="回波信号，600*16" type="vsip_cmview_f*" isoutput="0"/>
+        <echoPlan value="" describe="echo的傅里叶计算" type="vsip_fftm_f*" isoutput="2"/>
+        <echo_fft value="" describe="回波信号一次脉冲的傅立叶变换结果" type="vsip_cmview_f*" isoutput="2"/>
+        <echo_pulse value="" describe="回波信号一次脉冲的数据" type="vsip_cmview_f*" isoutput="2"/>
+        <pc value="" describe="输出结果" type="vsip_cmview_f*" isoutput="1"/>
+        <pc0 value="" describe="逆傅里叶变换" type="vsip_cmview_f*" isoutput="2"/>
+        <pcPlan value="" describe="pc的傅里叶计算" type="vsip_fftm_f*" isoutput="2"/>
+        <pc_fft value="" describe="脉冲压缩" type="vsip_cmview_f*" isoutput="2"/>
+    </Parameter>
+</Plugins>

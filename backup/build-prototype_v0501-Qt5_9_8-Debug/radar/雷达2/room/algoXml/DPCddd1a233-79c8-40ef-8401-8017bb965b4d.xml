@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>脉冲压缩</CN_Name>
+        <ID>{ddd1a233-79c8-40ef-8401-8017bb965b4d}</ID>
+        <Name>DPC</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/雷达2/room/algoXml</Path>
+        <Time>Sun Oct 25 17:40:54 2020</Time>
+        <callFunction>PulseCompress</callFunction>
+    </Information>
+    <Description>发射已调制(或编码)的宽脉冲，对回波信号进行压缩处理得到窄脉冲的雷达。</Description>
+    <Parameter>
+        <filename value="" isoutput="2" type="char**" describe="参数描述"/>
+        <gMsgDpcQ value="" isoutput="1" type="MSG_Q_ID" describe="输出消息队列"/>
+        <gMsgSimQ value="" isoutput="0" type="MSG_Q_ID" describe="输入消息列表"/>
+        <len_block value="" isoutput="2" type="unsigned int" describe="参数描述"/>
+        <nMalLen value="" isoutput="2" type="unsigned int" describe="参数描述"/>
+        <num_block value="" isoutput="2" type="unsigned int" describe="参数描述"/>
+        <num_filter value="" isoutput="2" type="unsigned int" describe="参数描述"/>
+        <num_thread value="" isoutput="2" type="unsigned int" describe="参数描述"/>
+        <pMalBuf value="" isoutput="2" type="char*" describe="参数描述"/>
+    </Parameter>
+</Plugins>

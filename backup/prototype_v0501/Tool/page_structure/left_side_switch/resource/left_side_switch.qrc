@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qss/left_side_switch.qss</file>
+        <file>img/hi.png</file>
+        <file>img/bs.png</file>
+        <file>img/hi2.png</file>
+        <file>img/jsk.png</file>
+        <file>img/kfb.png</file>
+        <file>img/logs.png</file>
+        <file>img/zujian.png</file>
+        <file>img/fz1.png</file>
+        <file>img/fz2.png</file>
+        <file>img/fzkf.png</file>
+    </qresource>
+</RCC>

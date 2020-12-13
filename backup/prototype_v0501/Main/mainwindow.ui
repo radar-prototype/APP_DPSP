@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>961</width>
+    <height>698</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>仿真主窗口</string>
+  </property>
+  <property name="whatsThis">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#cc0000;&quot;&gt;main board&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextBesideIcon</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="myGraphicsView" name="graphicsView">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>961</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>查看</string>
+    </property>
+    <addaction name="actionOpenGL"/>
+    <addaction name="actionCurve"/>
+    <addaction name="actionEquip"/>
+    <addaction name="actionToolsBar"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionopenproject"/>
+    <addaction name="actionopenfile"/>
+    <addaction name="actionrecentproject"/>
+    <addaction name="separator"/>
+    <addaction name="actionsaveproject"/>
+    <addaction name="actionsaveallproject"/>
+    <addaction name="separator"/>
+    <addaction name="actioncloseproject"/>
+    <addaction name="actioncloseallproject"/>
+    <addaction name="actionexit"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionredo"/>
+    <addaction name="actionundo"/>
+    <addaction name="actiondelete"/>
+    <addaction name="actionedit"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>调试</string>
+    </property>
+    <addaction name="actiondataPlayBack"/>
+    <addaction name="actionstart"/>
+    <addaction name="actionstop"/>
+    <addaction name="actioninterrupt"/>
+    <addaction name="actioncontinue"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="actionoption"/>
+    <addaction name="actionZoomin"/>
+    <addaction name="actionZoomout"/>
+    <addaction name="actionDrag"/>
+    <addaction name="actionReset"/>
+    <addaction name="actionCenter"/>
+   </widget>
+   <widget class="QMenu" name="menu_7">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="actionfullScreen"/>
+   </widget>
+   <widget class="QMenu" name="menu_8">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionabout"/>
+    <addaction name="actionhelp"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>分析</string>
+    </property>
+   </widget>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu"/>
+   <addaction name="menu_6"/>
+   <addaction name="menu_7"/>
+   <addaction name="menu_8"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>仿真主窗口</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionstart"/>
+   <addaction name="actionstop"/>
+   <addaction name="actioninterrupt"/>
+   <addaction name="actioncontinue"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget_left">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string>仿真工程元素</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QToolBox" name="toolBox_left">
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="tabSpacing">
+        <number>6</number>
+       </property>
+       <widget class="QWidget" name="page_radar">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>256</width>
+          <height>506</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset resource="../Res/res.qrc">
+          <normaloff>:/img/radar.png</normaloff>:/img/radar.png</iconset>
+        </attribute>
+        <attribute name="label">
+         <string>雷达设备</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="Main_left_list" name="listWidget_rader">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="sortingEnabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_ecm">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>256</width>
+          <height>506</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset resource="../Res/res.qrc">
+          <normaloff>:/img/ecmdemo.jpg</normaloff>:/img/ecmdemo.jpg</iconset>
+        </attribute>
+        <attribute name="label">
+         <string>电子对抗设备</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="Main_left_list" name="listWidget_ecm"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="paje_object">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>256</width>
+          <height>506</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset resource="../Res/res.qrc">
+          <normaloff>:/img/input.png</normaloff>:/img/input.png</iconset>
+        </attribute>
+        <attribute name="label">
+         <string>目标设备</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="Main_left_list" name="listWidget_object"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>场景操作</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionedit"/>
+   <addaction name="actiondelete"/>
+   <addaction name="actionZoomin"/>
+   <addaction name="actionZoomout"/>
+   <addaction name="actionDrag"/>
+   <addaction name="actionReset"/>
+   <addaction name="actionCenter"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>数据文件操作</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionopenproject"/>
+   <addaction name="actionsaveproject"/>
+   <addaction name="actiondataPlayBack"/>
+  </widget>
+  <action name="actionOpenGL">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/opengl.png</normaloff>:/img/opengl.png</iconset>
+   </property>
+   <property name="text">
+    <string>OpenGL</string>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/about.png</normaloff>:/img/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="actionhelp">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/help.png</normaloff>:/img/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>帮助</string>
+   </property>
+  </action>
+  <action name="actionfullScreen">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/full-screen.png</normaloff>:/img/full-screen.png</iconset>
+   </property>
+   <property name="text">
+    <string>全屏</string>
+   </property>
+  </action>
+  <action name="actionoption">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/options.png</normaloff>:/img/options.png</iconset>
+   </property>
+   <property name="text">
+    <string>选项</string>
+   </property>
+  </action>
+  <action name="actionstart">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/start.png</normaloff>:/img/start.png</iconset>
+   </property>
+   <property name="text">
+    <string>开始</string>
+   </property>
+  </action>
+  <action name="actionstop">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/stop.png</normaloff>:/img/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>停止</string>
+   </property>
+  </action>
+  <action name="actioninterrupt">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/interrupt.png</normaloff>:/img/interrupt.png</iconset>
+   </property>
+   <property name="text">
+    <string>中断</string>
+   </property>
+  </action>
+  <action name="actioncontinue">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/continue.png</normaloff>:/img/continue.png</iconset>
+   </property>
+   <property name="text">
+    <string>继续</string>
+   </property>
+  </action>
+  <action name="actionredo">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/redo.png</normaloff>:/img/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>重做</string>
+   </property>
+  </action>
+  <action name="actionundo">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/undo.png</normaloff>:/img/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销</string>
+   </property>
+  </action>
+  <action name="actiondelete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/delete-equipment.png</normaloff>:/img/delete-equipment.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+   <property name="toolTip">
+    <string>删除选中的设备</string>
+   </property>
+  </action>
+  <action name="actionedit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/edit-equipment.png</normaloff>:/img/edit-equipment.png</iconset>
+   </property>
+   <property name="text">
+    <string>参数</string>
+   </property>
+   <property name="toolTip">
+    <string>选择某个设备之后动态设置参数</string>
+   </property>
+  </action>
+  <action name="actionopenproject">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/open.png</normaloff>:/img/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionopenfile">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/openxml.png</normaloff>:/img/openxml.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="actionrecentproject">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/recent.png</normaloff>:/img/recent.png</iconset>
+   </property>
+   <property name="text">
+    <string>近期项目</string>
+   </property>
+  </action>
+  <action name="actionsaveproject">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/save-pro.png</normaloff>:/img/save-pro.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="actioncloseproject">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/close-pro.png</normaloff>:/img/close-pro.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭项目</string>
+   </property>
+  </action>
+  <action name="actioncloseallproject">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/close-all.png</normaloff>:/img/close-all.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭所有工程</string>
+   </property>
+  </action>
+  <action name="actionsaveallproject">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/save-all.png</normaloff>:/img/save-all.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存所有项目</string>
+   </property>
+  </action>
+  <action name="actionexit">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/exit.png</normaloff>:/img/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionCurve">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/curve.png</normaloff>:/img/curve.png</iconset>
+   </property>
+   <property name="text">
+    <string>动态曲线</string>
+   </property>
+  </action>
+  <action name="actionEquip">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/equipment.png</normaloff>:/img/equipment.png</iconset>
+   </property>
+   <property name="text">
+    <string>装备栏</string>
+   </property>
+  </action>
+  <action name="actionToolsBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/tools.png</normaloff>:/img/tools.png</iconset>
+   </property>
+   <property name="text">
+    <string>工具栏</string>
+   </property>
+  </action>
+  <action name="actiondataPlayBack">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/playback.png</normaloff>:/img/playback.png</iconset>
+   </property>
+   <property name="text">
+    <string>数据回放</string>
+   </property>
+   <property name="toolTip">
+    <string>总体仿真数据回放</string>
+   </property>
+  </action>
+  <action name="actionZoomin">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/zoomin.png</normaloff>:/img/zoomin.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+   <property name="toolTip">
+    <string>放大场景</string>
+   </property>
+  </action>
+  <action name="actionZoomout">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/zoomout.png</normaloff>:/img/zoomout.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+   <property name="toolTip">
+    <string>缩小场景</string>
+   </property>
+  </action>
+  <action name="actionDrag">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/drag.png</normaloff>:/img/drag.png</iconset>
+   </property>
+   <property name="text">
+    <string>拖动</string>
+   </property>
+   <property name="toolTip">
+    <string>移动场景画布</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/reset.png</normaloff>:/img/reset.png</iconset>
+   </property>
+   <property name="text">
+    <string>复位</string>
+   </property>
+   <property name="toolTip">
+    <string>复位场景中心位置</string>
+   </property>
+  </action>
+  <action name="actionCenter">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/center.png</normaloff>:/img/center.png</iconset>
+   </property>
+   <property name="text">
+    <string>中心</string>
+   </property>
+   <property name="toolTip">
+    <string>设置场景中心</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>myGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>mygraphicsview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Main_left_list</class>
+   <extends>QListWidget</extends>
+   <header>main_window/main_left_list.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>graphicsView</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../Res/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

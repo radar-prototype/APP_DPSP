@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>和差测角</CN_Name>
+        <ID>{2aa2810d-299c-425d-b874-b6f1bb0ca382}</ID>
+        <Name>SDAE</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/algoXml</Path>
+        <Time>Wed Nov 11 11:05:19 2020 GMT</Time>
+        <callFunction>SDAE</callFunction>
+    </Information>
+    <Description>和差测角组件</Description>
+    <Parameter>
+        <cMainBeamCnt describe="主波束数量" isoutput="2" type="int" value="4"/>
+        <gMsgSDAEQ describe="数据接收队列" isoutput="0" type="MSG_Q_ID" value=""/>
+        <gMsgSend2 describe="数据处理接收队列" isoutput="0" type="MSG_Q_ID" value=""/>
+        <num_thread describe="线程数量" isoutput="2" type="int" value="4"/>
+        <outputport describe="输出端口" isoutput="1" type="MSG_Q_ID" value=""/>
+        <sCPINum describe="CPI数量" isoutput="2" type="int" value="32"/>
+        <sMaxRgeCell describe="最大量程单元" isoutput="2" type="int" value="4096"/>
+    </Parameter>
+</Plugins>

@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow_Radar</class>
+ <widget class="QMainWindow" name="MainWindow_Radar">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1022</width>
+    <height>716</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>编辑雷达</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+      <widget class="QGraphicsView" name="graphicsView">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>9</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">margin:0;
+padding:0;</string>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContents</enum>
+       </property>
+       <property name="backgroundBrush">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>500</width>
+         <height>400</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#widget{
+border:0.6px solid gray;
+}</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#tabWidget{
+border:1px solid gray;
+}
+</string>
+          </property>
+          <property name="tabPosition">
+           <enum>QTabWidget::North</enum>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <property name="elideMode">
+           <enum>Qt::ElideNone</enum>
+          </property>
+          <property name="documentMode">
+           <bool>true</bool>
+          </property>
+          <property name="tabsClosable">
+           <bool>false</bool>
+          </property>
+          <property name="movable">
+           <bool>true</bool>
+          </property>
+          <property name="tabBarAutoHide">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>警告信息</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QTextEdit" name="textEdit_2">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>操作提示</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QTextEdit" name="textEdit">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_7">
+           <attribute name="title">
+            <string>端口 检测</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_7">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QTableWidget" name="tableWidget">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::DashLine</enum>
+              </property>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string>组件名称</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>中文名称</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>丢包率</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>吞吐率</string>
+               </property>
+              </column>
+              <item row="0" column="0">
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1022</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_tools">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="action_config"/>
+    <addaction name="actiongene"/>
+    <addaction name="actionGeneCode"/>
+    <addaction name="action_sendCode"/>
+    <addaction name="action_run"/>
+    <addaction name="action_compile"/>
+    <addaction name="actionRunRadar"/>
+   </widget>
+   <widget class="QMenu" name="menu_windows">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="actionproperty"/>
+    <addaction name="actionCom_list"/>
+   </widget>
+   <widget class="QMenu" name="menu_files">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpenXml"/>
+    <addaction name="actionsave"/>
+   </widget>
+   <widget class="QMenu" name="menu_other">
+    <property name="title">
+     <string>其他</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_component">
+    <property name="title">
+     <string>组件</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>部署</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionClusterState"/>
+    <addaction name="actionadd_Node"/>
+    <addaction name="actiondel_Node"/>
+   </widget>
+   <addaction name="menu_files"/>
+   <addaction name="menu_tools"/>
+   <addaction name="menu_windows"/>
+   <addaction name="menu_component"/>
+   <addaction name="menu_other"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockCompList">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>180</width>
+     <height>156</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>180</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="windowIcon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/XmlDockIcon.png</normaloff>:/img/XmlDockIcon.png</iconset>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>列表窗口</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <property name="styleSheet">
+     <string notr="true">#dockWidgetContents{
+border:1px solid gray;
+}</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="leftMargin">
+      <number>1</number>
+     </property>
+     <property name="topMargin">
+      <number>1</number>
+     </property>
+     <property name="rightMargin">
+      <number>1</number>
+     </property>
+     <property name="bottomMargin">
+      <number>1</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="RadarCompDraglistWidget" name="listWidget">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="cursor" stdset="0">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContents</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="mainwindow_radar_property" name="dockWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>111</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="windowIcon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/propertyDockIcon.png</normaloff>:/img/propertyDockIcon.png</iconset>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>属性窗口</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_3">
+   <property name="minimumSize">
+    <size>
+     <width>282</width>
+     <height>77</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>129</width>
+     <height>160</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetClosable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>控制台</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4">
+    <property name="styleSheet">
+     <string notr="true">#dockWidgetContents_4{
+border:1px solid gray;
+}</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4" rowstretch="0" columnstretch="0">
+     <property name="leftMargin">
+      <number>1</number>
+     </property>
+     <property name="topMargin">
+      <number>1</number>
+     </property>
+     <property name="rightMargin">
+      <number>1</number>
+     </property>
+     <property name="bottomMargin">
+      <number>1</number>
+     </property>
+     <property name="spacing">
+      <number>1</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="tabWidget_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#tabWidget_2{
+border:1px solid gray;
+}</string>
+       </property>
+       <property name="tabPosition">
+        <enum>QTabWidget::South</enum>
+       </property>
+       <property name="tabShape">
+        <enum>QTabWidget::Rounded</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="elideMode">
+        <enum>Qt::ElideNone</enum>
+       </property>
+       <property name="documentMode">
+        <bool>true</bool>
+       </property>
+       <property name="tabsClosable">
+        <bool>true</bool>
+       </property>
+       <property name="movable">
+        <bool>false</bool>
+       </property>
+       <property name="tabBarAutoHide">
+        <bool>false</bool>
+       </property>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>调试输出</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_4">
+        <attribute name="title">
+         <string>程序输出</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_5">
+        <attribute name="title">
+         <string>编译输出</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_6">
+        <attribute name="title">
+         <string>注意事项</string>
+        </attribute>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar_config">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="windowTitle">
+    <string>头部工具栏</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionsave"/>
+   <addaction name="action_config"/>
+   <addaction name="actiongene"/>
+   <addaction name="actionGeneCode"/>
+   <addaction name="action_sendCode"/>
+   <addaction name="action_compile"/>
+   <addaction name="action_run"/>
+   <addaction name="actionRunRadar"/>
+   <addaction name="separator"/>
+   <addaction name="actionmanage_Node"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionCom_list">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/compXmlDock.png</normaloff>:/img/compXmlDock.png</iconset>
+   </property>
+   <property name="text">
+    <string>组件窗口</string>
+   </property>
+   <property name="toolTip">
+    <string>组件窗口</string>
+   </property>
+  </action>
+  <action name="actionOpenXml">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/openxml.png</normaloff>:/img/openxml.png</iconset>
+   </property>
+   <property name="text">
+    <string>导入已有雷达</string>
+   </property>
+   <property name="toolTip">
+    <string>导入另一个雷达进行编辑</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/save.png</normaloff>:/img/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存当前雷达</string>
+   </property>
+  </action>
+  <action name="actionRunRadar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/runXml.png</normaloff>:/img/runXml.png</iconset>
+   </property>
+   <property name="text">
+    <string>运行可视化</string>
+   </property>
+   <property name="toolTip">
+    <string>运行可视化结果</string>
+   </property>
+  </action>
+  <action name="actionproperty">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/propertyDock.png</normaloff>:/img/propertyDock.png</iconset>
+   </property>
+   <property name="text">
+    <string>属性窗口</string>
+   </property>
+  </action>
+  <action name="actiongene">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/data.png</normaloff>:/img/data.png</iconset>
+   </property>
+   <property name="text">
+    <string>生成数据</string>
+   </property>
+   <property name="toolTip">
+    <string>生成数据</string>
+   </property>
+  </action>
+  <action name="actionGeneCode">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/generateCode.png</normaloff>:/img/generateCode.png</iconset>
+   </property>
+   <property name="text">
+    <string>生成代码</string>
+   </property>
+   <property name="toolTip">
+    <string>生成代码</string>
+   </property>
+  </action>
+  <action name="action_run">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/path.png</normaloff>:/img/path.png</iconset>
+   </property>
+   <property name="text">
+    <string>运行代码</string>
+   </property>
+   <property name="toolTip">
+    <string>运行代码</string>
+   </property>
+  </action>
+  <action name="action_sendCode">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/send.png</normaloff>:/img/send.png</iconset>
+   </property>
+   <property name="text">
+    <string>分发代码</string>
+   </property>
+   <property name="toolTip">
+    <string>分发代码</string>
+   </property>
+  </action>
+  <action name="action_rand_add">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/random.png</normaloff>:/img/random.png</iconset>
+   </property>
+   <property name="text">
+    <string>新增</string>
+   </property>
+   <property name="toolTip">
+    <string>新增随机新型组件</string>
+   </property>
+  </action>
+  <action name="action_compile">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/component.png</normaloff>:/img/component.png</iconset>
+   </property>
+   <property name="text">
+    <string>代码编译</string>
+   </property>
+  </action>
+  <action name="actionadd_Node">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/addnode.png</normaloff>:/img/addnode.png</iconset>
+   </property>
+   <property name="text">
+    <string>硬件设备监控</string>
+   </property>
+   <property name="toolTip">
+    <string>增加一台服务器设备</string>
+   </property>
+  </action>
+  <action name="actiondel_Node">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/delnode.png</normaloff>:/img/delnode.png</iconset>
+   </property>
+   <property name="text">
+    <string>扩展节点</string>
+   </property>
+   <property name="toolTip">
+    <string>删除一台服务器设备</string>
+   </property>
+  </action>
+  <action name="actionClusterState">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/checknode.png</normaloff>:/img/checknode.png</iconset>
+   </property>
+   <property name="text">
+    <string>集群状态显示</string>
+   </property>
+   <property name="toolTip">
+    <string>显示集群节点的状态</string>
+   </property>
+  </action>
+  <action name="actionmanage_Node">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/managenode.png</normaloff>:/img/managenode.png</iconset>
+   </property>
+   <property name="text">
+    <string>节点管理</string>
+   </property>
+   <property name="toolTip">
+    <string>打开管理面板</string>
+   </property>
+  </action>
+  <action name="action_config">
+   <property name="icon">
+    <iconset resource="../Res/res.qrc">
+     <normaloff>:/img/tools.png</normaloff>:/img/tools.png</iconset>
+   </property>
+   <property name="text">
+    <string>整体参数配置</string>
+   </property>
+  </action>
+  <zorder>dockCompList</zorder>
+  <zorder>dockWidget</zorder>
+  <zorder>dockWidget_3</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RadarCompDraglistWidget</class>
+   <extends>QListWidget</extends>
+   <header>radarcompdraglistwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>mainwindow_radar_property</class>
+   <extends>QDockWidget</extends>
+   <header location="global">mainwindow_radar_property.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Res/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,7 @@
+	vsip_cmview_f *echo_pulse = vsip_cmcreate_f(1, SampleNumber, VSIP_ROW, VSIP_MEM_NONE);
+    vsip_cmview_f *echo_fft = vsip_cmcreate_f(1, SampleNumber, VSIP_ROW, VSIP_MEM_NONE);
+    vsip_cmview_f *pc_fft = vsip_cmcreate_f(1, SampleNumber, VSIP_ROW, VSIP_MEM_NONE);
+    vsip_cmview_f *pc0 = vsip_cmcreate_f(1, SampleNumber, VSIP_ROW, VSIP_MEM_NONE);
+    vsip_fftm_f *pc_plan = vsip_ccfftmop_create_f(1, SampleNumber, 1, VSIP_FFT_INV, VSIP_ROW, 10, VSIP_ALG_NOISE);
+    vsip_cmview_f *pc = vsip_cmcreate_f(PulseNumber, SampleNumber, VSIP_ROW, VSIP_MEM_NONE);
+    vsip_fftm_f *echo_plan = vsip_ccfftmop_create_f(1, SampleNumber, 1, VSIP_FFT_FWD, VSIP_ROW, 10, VSIP_ALG_NOISE);

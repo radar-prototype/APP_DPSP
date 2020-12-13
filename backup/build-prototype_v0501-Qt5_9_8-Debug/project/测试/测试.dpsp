@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-root>
+    <information>
+        <name>测试</name>
+        <id>{7f3a13ff-bacc-46bd-ae8f-b9ce7c506312}</id>
+    </information>
+    <components>
+        <radar name="雷达11" id="radar6a483249-e80f-4def-8932-ae2ff8f106bb"/>
+        <radar name="雷达10" id="radar6ecd582a-be1a-4034-86d5-cf1249732277"/>
+    </components>
+</project-root>

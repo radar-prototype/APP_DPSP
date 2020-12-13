@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>仿真组件</CN_Name>
+        <ID>{37396bdb-df29-406f-b5cc-3367c312a0e6}</ID>
+        <Name>SIM</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/雷达10/room/algoXml</Path>
+        <Time>Wed Nov 11 11:29:06 2020</Time>
+        <callFunction>Simulate</callFunction>
+    </Information>
+    <Description>仿真目标仿真目标仿真目标仿真目标仿真目标仿真目标</Description>
+    <Parameter>
+        <cMainBeamCnt type="unsigned int" describe="主波束数量" value="4" isoutput="2"/>
+        <cSideBeamCnt type="unsigned int" describe="侧波束数量" value="1" isoutput="2"/>
+        <gMsgSimQ type="MSG_Q_ID" describe="仿真对象的数据列表" value="" isoutput="1"/>
+        <num_thread type="unsigned int" describe="线程数量" value="1" isoutput="2"/>
+        <sMaxRgeCell type="unsigned int" describe="最大单元范围" value="4096" isoutput="2"/>
+    </Parameter>
+</Plugins>

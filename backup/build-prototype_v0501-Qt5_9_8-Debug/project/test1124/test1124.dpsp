@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-root>
+    <information>
+        <name>test1124</name>
+        <id>{a2cc142c-7da2-4b90-bfdc-950ada3a8c18}</id>
+    </information>
+    <components>
+        <ecm name="ecm1" id="ecmf132093d-c4b2-406b-9e89-aa660d2be68c"/>
+        <object name="obj1" id="object0c964ae0-1f61-442d-b7b5-53db49a07e31"/>
+        <radar name="radar1" id="radare8963b0d-71ee-4226-8720-3da411c76593"/>
+    </components>
+</project-root>

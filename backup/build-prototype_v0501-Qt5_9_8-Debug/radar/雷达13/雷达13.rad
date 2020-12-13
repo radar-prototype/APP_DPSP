@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components height="5000" width="5000">
+    <Arrs/>
+    <Items>
+        <CFAR id="{08030416-ccba-4c8e-9353-db0e211a861e}" pos_y="2501" pos_x="2324">
+            <color>#a0a0a4</color>
+            <call>CFAR</call>
+            <port port_type="1" name="CFAR" isoutput="0" dataType="">{3582cc7b-eb50-48f0-a938-1d7cfed2dca3}</port>
+            <port port_type="2" name="恒虚警率" isoutput="0" dataType="">{793a80f5-df14-4364-8e8d-6e3c19526d90}</port>
+            <port port_type="0" name="gMsgSDAEQ" isoutput="1" dataType="MSG_Q_ID">{4de811df-3265-4178-9c84-f4ba05cd4e2c}</port>
+            <port port_type="0" name="gMsgSend1" isoutput="0" dataType="MSG_Q_ID">{d497f2c0-054b-4173-8ee2-7e4d6d6b6cb7}</port>
+        </CFAR>
+    </Items>
+</components>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>测试</CN_Name>
+        <ID>{f0bc40d8-b834-4794-b3a0-659e185a6b46}</ID>
+        <Name>TEST</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/radar2/room/algoXml</Path>
+        <Time>Wed Sep 30 14:30:57 2020</Time>
+        <callFunction>test_func</callFunction>
+    </Information>
+    <Description>这个是打包成的子模型，供测试使用。</Description>
+    <Parameter>
+        <filename type="char**" isoutput="" value="" describe="参数描述"/>
+        <gMsgDatQ type="MSG_Q_ID" isoutput="" value="" describe="上一步的消息列表"/>
+        <gMsgDpcQ type="MSG_Q_ID" isoutput="" value="" describe="输出消息队列"/>
+        <gMsgSLCQ type="MSG_Q_ID" isoutput="1" value="" describe="SLC的消息队列"/>
+        <gMsgSimQ type="MSG_Q_ID" isoutput="0" value="" describe="输入消息列表"/>
+        <len_block type="unsigned int" isoutput="" value="" describe="参数描述"/>
+        <max_mRgeCell type="unsigned int" isoutput="" value="" describe="参数描述"/>
+        <max_sidelobe type="unsigned int" isoutput="" value="" describe="参数描述"/>
+        <nMalLen type="unsigned int" isoutput="" value="" describe="参数描述"/>
+        <num_block type="unsigned int" isoutput="" value="" describe="参数描述"/>
+        <num_filter type="unsigned int" isoutput="" value="" describe="参数描述"/>
+        <num_sRgeCell type="unsigned int" isoutput="" value="" describe="参数描述"/>
+        <num_thread type="unsigned int" isoutput="" value="" describe="参数描述"/>
+        <pLinkBuf type="char*" isoutput="" value="" describe="参数描述"/>
+        <pMalBuf type="char*" isoutput="" value="" describe="参数描述"/>
+    </Parameter>
+</Plugins>

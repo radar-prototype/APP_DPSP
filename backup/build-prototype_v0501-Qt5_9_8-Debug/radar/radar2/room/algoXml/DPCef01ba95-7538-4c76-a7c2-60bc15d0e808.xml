@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>脉冲压缩</CN_Name>
+        <ID>{ef01ba95-7538-4c76-a7c2-60bc15d0e808}</ID>
+        <Name>DPC</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/radar2/room/algoXml</Path>
+        <Time>Tue Dec 1 17:53:51 2020</Time>
+        <callFunction>PulseCompress</callFunction>
+    </Information>
+    <Description>发射已调制(或编码)的宽脉冲，对回波信号进行压缩处理得到窄脉冲的雷达。</Description>
+    <Parameter>
+        <cMainBeamCnt value="4" describe="主波束数量" type="int" isoutput="2"/>
+        <cSideBeamCnt value="1" describe="侧波束数量" type="int" isoutput="2"/>
+        <filename value="files/FLM_25.6_5_2048.txt,files/FLM_25.6_5_1024.txt,files/FLM_25.6_10_2048.txt,files/FLM_25.6_5_1024.txt" describe="参数描述" type="char**" isoutput="2"/>
+        <gMsgDatQ value="" describe="输出消息队列" type="MSG_Q_ID" isoutput="1"/>
+        <gMsgSimQ value="" describe="输入消息列表" type="MSG_Q_ID" isoutput="0"/>
+        <num_filter value="4" describe="滤波器数量" type="int" isoutput="2"/>
+        <num_thread value="2" describe="处理线程数量" type="int" isoutput="2"/>
+        <sMaxRgeCell value="4096" describe="最大单元范围" type="int" isoutput="2"/>
+    </Parameter>
+</Plugins>

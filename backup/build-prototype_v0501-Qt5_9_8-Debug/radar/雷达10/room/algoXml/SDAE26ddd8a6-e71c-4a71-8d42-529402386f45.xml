@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>和差测角</CN_Name>
+        <ID>{26ddd8a6-e71c-4a71-8d42-529402386f45}</ID>
+        <Name>SDAE</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/雷达10/room/algoXml</Path>
+        <Time>Wed Nov 11 11:29:24 2020</Time>
+        <callFunction>SDAE</callFunction>
+    </Information>
+    <Description>和差测角组件</Description>
+    <Parameter>
+        <cMainBeamCnt type="unsigned  int" describe="主波束数量" value="4" isoutput="2"/>
+        <gMsgSDAEQ type="MSG_Q_ID" describe="数据接收队列" value="" isoutput="0"/>
+        <gMsgSend2 type="MSG_Q_ID" describe="数据处理接收队列" value="" isoutput="0"/>
+        <num_thread type="unsigned  int" describe="线程数量" value="4" isoutput="2"/>
+        <outputport type="MSG_Q_ID" describe="输出端口" value="" isoutput="1"/>
+        <sCPINum type="unsigned  int" describe="CPI数量" value="32" isoutput="2"/>
+        <sMaxRgeCell type="unsigned  int" describe="最大量程单元" value="4096" isoutput="2"/>
+    </Parameter>
+</Plugins>

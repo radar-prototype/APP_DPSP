@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components width="5000" height="5000">
+    <Arrs>
+        <arrow id="{53905a81-bb7e-4b71-95db-69f5435c2238}" end_item_id="{ae71d47c-d223-48a2-94b2-afa70a52888d}" start_item_id="{2da80ab9-a75b-4006-aba2-4873f851b522}">
+            <color>#000000</color>
+            <start_port>{68bf5071-672c-483e-8e1d-0ab69d5c861d}</start_port>
+            <end_port>{fcd6dd20-d03d-42b8-aa3b-ac3ed5d764af}</end_port>
+        </arrow>
+        <arrow id="{f6a4e07c-64ca-4159-a39c-b3ae05de5d0c}" end_item_id="{d5973bcd-2ddf-4a79-bc50-57127178707c}" start_item_id="{ae71d47c-d223-48a2-94b2-afa70a52888d}">
+            <color>#000000</color>
+            <start_port>{f3c40bbc-ec0e-4cff-b4c0-03592a2493de}</start_port>
+            <end_port>{b4e529ce-343d-4398-80cb-61ad091b21ee}</end_port>
+        </arrow>
+    </Arrs>
+    <Items>
+        <CFAR id="{d5973bcd-2ddf-4a79-bc50-57127178707c}" pos_x="2447" pos_y="2489">
+            <color>#a0a0a4</color>
+            <call>constantFalseAlarmRate(cfar_result, mtd, protect_number, reference_number, alpha, mean_matrix, temp);&#xd;
+        gettimeofday(&amp;t2, NULL);&#xd;
+        printf("speed time is:%f(ms)\n", (double)(t2.tv_sec * 1e6 + t2.tv_usec) / 1000.0 - (double)(t1.tv_sec * 1e6 + t1.tv_usec) / 1000.0); //time&#xd;
+        writeData_1("./data/CFAR.txt", cfar_result);</call>
+            <port dataType="" name="CFAR" port_type="1" isoutput="0">{a9ce99b5-c821-468a-9111-f23745bc9bb9}</port>
+            <port dataType="" name="恒虚警率" port_type="2" isoutput="0">{f74e45e2-f0ec-4dea-8461-dab9d7472028}</port>
+            <port dataType="" name="alpha" port_type="3" isoutput="0">{56b6e942-2e74-437d-ae2a-436414bdb9b8}</port>
+            <port dataType="vsip_mview_f*" name="cfar_result" port_type="0" isoutput="1">{80141f49-e018-4a40-b382-29bc867140e1}</port>
+            <port dataType="" name="mean_matrix" port_type="3" isoutput="0">{60b61b00-7af8-458e-9abe-f10e7c7fc6b0}</port>
+            <port dataType="vsip_mview_f*" name="mtd" port_type="0" isoutput="0">{b4e529ce-343d-4398-80cb-61ad091b21ee}</port>
+            <port dataType="" name="protect_number" port_type="3" isoutput="0">{6194d5eb-4eb4-4ebe-8498-2b2c79c5077c}</port>
+            <port dataType="" name="reference_number" port_type="3" isoutput="0">{78e7c208-4eb1-4c4d-9a58-1883f63a64ad}</port>
+            <port dataType="" name="temp" port_type="3" isoutput="0">{a3767707-2152-4802-a501-ccdbc42f86d6}</port>
+        </CFAR>
+        <FDPC id="{2da80ab9-a75b-4006-aba2-4873f851b522}" pos_x="1887" pos_y="2484">
+            <color>#a0a0a4</color>
+            <call>frequencyDomainPulseCompression(npj_out, echo_pulse, echo_fft, coeff_fft, pc0, pc, pc_fft, echo_plan, pc_plan);&#xd;
+        writeData("./data/FDPC.txt",pc);</call>
+            <port dataType="" name="FDPC" port_type="1" isoutput="0">{0b3f957f-7d10-4339-952e-57e652a82e53}</port>
+            <port dataType="" name="脉冲压缩" port_type="2" isoutput="0">{1ea5a2ac-a8fb-463b-9cd0-57798bb9129f}</port>
+            <port dataType="" name="coeff_fft" port_type="3" isoutput="0">{7a7525c1-3b35-4f34-98e9-a64900ea8b8a}</port>
+            <port dataType="vsip_cmview_f*" name="echo" port_type="0" isoutput="0">{074daf13-b900-4fbc-aa49-565dc1052322}</port>
+            <port dataType="" name="echoPlan" port_type="3" isoutput="0">{c17e24b9-cd34-4b29-a639-b9033516ccbf}</port>
+            <port dataType="" name="echo_fft" port_type="3" isoutput="0">{f03fff84-c7b3-4801-b68d-d2928d55f166}</port>
+            <port dataType="" name="echo_pulse" port_type="3" isoutput="0">{f1222d38-cc58-4e9a-94f8-f7196fe4079a}</port>
+            <port dataType="vsip_cmview_f*" name="pc" port_type="0" isoutput="1">{68bf5071-672c-483e-8e1d-0ab69d5c861d}</port>
+            <port dataType="" name="pc0" port_type="3" isoutput="0">{55ab0adc-eac8-4692-88b0-9515ae56f416}</port>
+            <port dataType="" name="pcPlan" port_type="3" isoutput="0">{7cfe262c-66d1-4361-bbb4-6cd69cb63d38}</port>
+            <port dataType="" name="pc_fft" port_type="3" isoutput="0">{8f295838-2000-43a3-b3d4-b19f553eee99}</port>
+        </FDPC>
+        <MTD id="{ae71d47c-d223-48a2-94b2-afa70a52888d}" pos_x="2226" pos_y="2532">
+            <color>#a0a0a4</color>
+            <call>movingTargetDetection(mtd, pc, buff, buff_fft, win, buff_plan, max, tempm);&#xd;
+        writeData_1("./data/MTD.txt",mtd);</call>
+            <port dataType="" name="MTD" port_type="1" isoutput="0">{ea0b0d58-07e6-4010-add6-d1282d42b82d}</port>
+            <port dataType="" name="动目标检测" port_type="2" isoutput="0">{6193515f-add8-46fc-a67c-d855763894c1}</port>
+            <port dataType="" name="buff" port_type="3" isoutput="0">{328147cd-6195-410e-96a0-3c3c96df10da}</port>
+            <port dataType="" name="buffPlan" port_type="3" isoutput="0">{5e0a6b91-f85a-42a5-95cd-21deda30180d}</port>
+            <port dataType="" name="buff_fft" port_type="3" isoutput="0">{fbc3b258-7fee-4f46-939b-8a300be80fdb}</port>
+            <port dataType="" name="max" port_type="3" isoutput="0">{ccbadaa3-b289-4b23-af5e-bc8616e233c4}</port>
+            <port dataType="vsip_mview_f*" name="mtd" port_type="0" isoutput="1">{f3c40bbc-ec0e-4cff-b4c0-03592a2493de}</port>
+            <port dataType="vsip_cmview_f*" name="pc" port_type="0" isoutput="0">{fcd6dd20-d03d-42b8-aa3b-ac3ed5d764af}</port>
+            <port dataType="" name="temp" port_type="3" isoutput="0">{869df20e-bdc3-43e0-ad4e-5c327db7099c}</port>
+            <port dataType="" name="win" port_type="3" isoutput="0">{c29f0886-baec-4ddc-b868-000019fe305a}</port>
+        </MTD>
+    </Items>
+</components>

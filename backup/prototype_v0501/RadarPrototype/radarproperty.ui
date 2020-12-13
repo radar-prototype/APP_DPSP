@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RadarProperty</class>
+ <widget class="QWidget" name="RadarProperty">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>511</width>
+    <height>348</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>雷达属性</string>
+  </property>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

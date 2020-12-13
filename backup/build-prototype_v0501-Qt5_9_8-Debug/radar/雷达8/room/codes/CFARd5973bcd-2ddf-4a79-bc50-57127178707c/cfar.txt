@@ -1,0 +1,9 @@
+	vsip_scalar_f temp;
+    int protect_number = 3;
+    int reference_number = 50;
+    int alpha = 2;
+    vsip_mview_f *cfar_result = vsip_mcreate_f(1, SampleNumber, VSIP_ROW, VSIP_MEM_NONE);
+    vsip_mview_f *noise_gate = vsip_mcreate_f(1, SampleNumber, VSIP_ROW, VSIP_MEM_NONE);
+    vsip_mview_f *mean_matrix = vsip_mcreate_f(1, SampleNumber, VSIP_ROW, VSIP_MEM_CONST);
+	for (i = 0; i < number; i++)
+	{

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>和差测角</CN_Name>
+        <ID>{9eba5449-d121-4a60-af90-8a7913350035}</ID>
+        <Name>SDAE</Name>
+        <Path>/home/kylin/xidian-723/20201104/20201111/build-prototype_v0501-unknown-Debug/radar/雷达11/room/algoXml</Path>
+        <Time>周四 11月 12 12:40:55 2020</Time>
+        <callFunction>SDAE</callFunction>
+    </Information>
+    <Description>和差测角组件</Description>
+    <Parameter>
+        <cMainBeamCnt describe="主波束数量" isoutput="2" type="unsigned  int" value="4"/>
+        <gMsgSDAEQ describe="数据接收队列" isoutput="0" type="MSG_Q_ID" value=""/>
+        <gMsgSend2 describe="数据处理接收队列" isoutput="0" type="MSG_Q_ID" value=""/>
+        <num_thread describe="线程数量" isoutput="2" type="unsigned  int" value="4"/>
+        <outputport describe="输出端口" isoutput="1" type="MSG_Q_ID" value=""/>
+        <sCPINum describe="CPI数量" isoutput="2" type="unsigned  int" value="32"/>
+        <sMaxRgeCell describe="最大量程单元" isoutput="2" type="unsigned  int" value="4096"/>
+    </Parameter>
+</Plugins>

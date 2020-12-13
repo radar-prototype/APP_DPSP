@@ -1,0 +1,63 @@
+// 数据接收线程
+void *[COMPONENT_NAME]_Component(void *arg)
+{
+	RSPL_[COMP_CAPITALIZE]_ICOMP *pComp = (RSPL_[COMP_CAPITALIZE]_ICOMP *)arg;
+	RSPL_[COMP_CAPITALIZE]_ENV *pEnv;
+	RSPL_LINKING_ICOMP *pOut, *pRecv, *pPrev;
+	char *pbuf;
+	int nFrame = 0;
+	rspl_thread_param tp_[COMP_LAST_LOWERCASE], tp_[COMP_THIS_LOWERCASE];
+	BOOL bFirst = TRUE;
+
+	if (pComp)
+	{
+		if (pComp->nMalLen)
+			pComp->pMalBuf = (char *)malloc(pComp->nMalLen);
+		else
+			pComp->pMalBuf = NULL;
+
+		pOut = rspl_comm_InitLinking(pComp->num_block, pComp->len_block, 0);
+		pEnv = rspl_[COMP_UNDERLINE_NAME]_init(pComp);
+		if (pEnv)
+		{
+			while (1)
+			{
+				[MSG_Q_RECEIVE_PRE]
+				pbuf = rspl_comm_get_buf(pOut);
+				[COMP_UNDERLINE_ALL_LOWERCASE_ENTRY]
+				pOut = pOut->next;
+
+				tp_[COMP_THIS_LOWERCASE].pEnv = [INIT_P_ENV];
+				tp_[COMP_THIS_LOWERCASE].pIn = [PBUF_OR_LAST_PIN];
+				tp_[COMP_THIS_LOWERCASE].pOut = [PBUF_OR_RSPL_COMM_GET_BUF];
+				msgQSendNext(&gMsg[COMP_TITLE_CASE]Q, (char *)&tp_[COMP_THIS_LOWERCASE], sizeof(rspl_thread_param), 0, 1);
+				usleep(200);
+			}
+			rspl_simulate_target_uninit(pEnv, pComp, pOut);
+		}
+	}
+}
+
+// 数据处理线程
+void *[COMPONENT_NAME]_thread(void *arg)
+{
+	rspl_thread_param tp_[COMP_THIS_LOWERCASE], tp_[COMP_DAT_LOWERCASE];
+	pthread_t tidp;
+	int thread_id = *((int *)arg);
+	RSPL_[COMP_CAPITALIZE]_ENV *pEnv;
+
+	tidp = pthread_self();
+
+	while (1)
+	{
+		msgQReceive(&gMsg[COMP_TITLE_CASE]Q, (char *)&tp_[COMP_THIS_LOWERCASE], sizeof(rspl_thread_param), 0);
+		pEnv = (RSPL_[COMP_CAPITALIZE]_ENV *)tp_[COMP_THIS_LOWERCASE].pEnv;
+		[RSPL_COMP_UNDERLINE_NAME_FUNCTION_CALL]
+
+		tp_[COMP_DAT_LOWERCASE].pEnv = NULL;
+		tp_[COMP_DAT_LOWERCASE].pIn = (char *)tp_[COMP_DAT_LOWERCASE].pIn;
+		tp_[COMP_DAT_LOWERCASE].pOut = NULL;
+		msgQSendNext(&gMsg[COMP_TITLE_CASE]Q, (char *)&tp_[COMP_DAT_LOWERCASE], sizeof(rspl_thread_param), 0, 1, &param_[COMP_THIS_LOWERCASE], &param_[COMP_NEXT_LOWERCASE]);
+		printf("dpc thread_id = %d\n", thread_id);
+	}
+}

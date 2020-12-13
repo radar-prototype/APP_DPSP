@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>仿真组件</CN_Name>
+        <ID>{f39719dc-c72f-4a97-8808-ce8a2e71ad2b}</ID>
+        <Name>SIM</Name>
+        <Path>/home/kylin/xidian-723/20201104/20201111/build-prototype_v0501-unknown-Debug/radar/雷达11/room/algoXml</Path>
+        <Time>周四 11月 12 12:40:11 2020</Time>
+        <callFunction>Simulate</callFunction>
+    </Information>
+    <Description>仿真目标仿真目标仿真目标仿真目标仿真目标仿真目标</Description>
+    <Parameter>
+        <cMainBeamCnt describe="主波束数量" isoutput="2" type="unsigned int" value="4"/>
+        <cSideBeamCnt describe="侧波束数量" isoutput="2" type="unsigned int" value="1"/>
+        <gMsgSimQ describe="仿真对象的数据列表" isoutput="1" type="MSG_Q_ID" value=""/>
+        <num_thread describe="线程数量" isoutput="2" type="unsigned int" value="1"/>
+        <sMaxRgeCell describe="最大单元范围" isoutput="2" type="unsigned int" value="4096"/>
+    </Parameter>
+</Plugins>

@@ -1,0 +1,42 @@
+#include "[DPCOMPNAMEALLCAPTICAL].h"
+/***********************************************
+ *[DPCOMPNAMEALLCAPTICAL] VERSION: _VERSION_	
+ *CREATEDATE: _CREATEDATE_
+ *----------------------------------------------
+ *名称: _NAME_
+ *功能: _FUNCTION_
+ *作者: _AUTHOR_
+ *更新时间: _DATETIME_
+ ***********************************************/
+
+[DPCOMPNAMEALLCAPTICAL]::[DPCOMPNAMEALLCAPTICAL](void){
+}
+
+MSG_Q_ID [DPCOMPNAMEALLCAPTICAL]::gMsg[DPCOMPNAMECAPTICAL]QPre;
+MSG_Q_ID [DPCOMPNAMEALLCAPTICAL]::gMsg[DPCOMPNAMECAPTICAL]QNow;
+
+void [DPCOMPNAMEALLCAPTICAL]::init(){
+	[THISAREAISPROPERTIESINITIAL]
+	name="[DPCOMPNAMELOWERCASE]";
+	ip="[DPCOMPIP]";
+	msgQCreate(&([DPCOMPNAMEALLCAPTICAL]::gMsg[DPCOMPNAMECAPTICAL]QPre), [MSGQUELEN], [DATASIZE], MSG_Q_FIFO);
+	msgQCreate(&([DPCOMPNAMEALLCAPTICAL]::gMsg[DPCOMPNAMECAPTICAL]QNow), [MSGQUELEN], [DATASIZE], MSG_Q_FIFO);
+}
+
+void [DPCOMPNAMEALLCAPTICAL]::run(){
+	pthread_create(&tidp_[DPCOMPNAMELOWERCASE], NULL, [DPCOMPNAMEALLCAPTICAL]::handle_thread,(void*)&(pCom_[DPCOMPNAMELOWERCASE]));
+}
+
+void* [DPCOMPNAMEALLCAPTICAL]::receive_thread(void* args){
+	printf("receive_thread------------------");
+	return NULL;
+}
+
+void* [DPCOMPNAMEALLCAPTICAL]::handle_thread(void* args){
+	
+}
+
+void [DPCOMPNAMEALLCAPTICAL]::uninit(){
+
+}
+

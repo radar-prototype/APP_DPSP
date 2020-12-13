@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>副瓣对消</CN_Name>
+        <ID>{751524de-b86d-4378-881a-2e7172f9e356}</ID>
+        <Name>SLC</Name>
+        <Path>E:/MasterGraduateStudent/Laboratory/723/Projects_dir/20200804/build-prototype_v0501-Qt5_9_8-Debug/algoXml</Path>
+        <Time>Wed Nov 11 16:17:10 2020 GMT</Time>
+        <callFunction>SidelobeCanceller</callFunction>
+    </Information>
+    <Description>副瓣对消技术是雷达抗有源压制式噪声干扰的一项重要措施,可以有效提高干扰环境下雷达最大探测距离。</Description>
+    <Parameter>
+        <cMainBeamCnt value="4" isoutput="2" type="int" describe="主波束数量"/>
+        <cSideBeamCnt value="1" isoutput="2" type="int" describe="侧波束数量"/>
+        <gMsgCSAQ value="" isoutput="1" type="MSG_Q_ID" describe="数据发送队列"/>
+        <gMsgDatQ value="" isoutput="0" type="MSG_Q_ID" describe="数据接收队列"/>
+        <num_sRgeCell value="200" isoutput="2" type="int" describe="距离单元的数量"/>
+        <num_thread value="2" isoutput="2" type="int" describe="线程数量"/>
+        <sCPINum value="32" isoutput="2" type="int" describe="CPI数量"/>
+        <sMaxRgeCell value="4096" isoutput="2" type="int" describe="最大量程单元"/>
+    </Parameter>
+</Plugins>

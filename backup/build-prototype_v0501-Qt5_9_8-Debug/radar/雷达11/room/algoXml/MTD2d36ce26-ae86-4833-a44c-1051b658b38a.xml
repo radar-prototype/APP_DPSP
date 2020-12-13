@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>动目标检测</CN_Name>
+        <ID>{2d36ce26-ae86-4833-a44c-1051b658b38a}</ID>
+        <Name>MTD</Name>
+        <Path>/home/kylin/xidian-723/20201104/20201111/build-prototype_v0501-unknown-Debug/radar/雷达11/room/algoXml</Path>
+        <Time>周四 11月 12 12:40:25 2020</Time>
+        <callFunction>TargetDetection</callFunction>
+    </Information>
+    <Description>采用滤波器组分别滤出杂波与目标信息，因而能区别动目标和固定目标的信号检测技术。通过计算一维频谱的输出与噪声电平的比较识别动目标。</Description>
+    <Parameter>
+        <cMainBeamCnt describe="主波束数量" isoutput="2" type="unsigned int" value="4"/>
+        <gMsgCSAQ describe="数据接收队列" isoutput="0" type="MSG_Q_ID" value=""/>
+        <gMsgSend1 describe="数据发送恒虚警组件队列" isoutput="1" type="MSG_Q_ID" value=""/>
+        <gMsgSend2 describe="数据发送和差测角组件队列" isoutput="1" type="MSG_Q_ID" value=""/>
+        <num_thread describe="处理线程数量" isoutput="2" type="unsigned int" value="4"/>
+        <sCPINum describe="CPI数量" isoutput="2" type="unsigned int" value="32"/>
+        <sMaxRgeCell describe="最大量程单元" isoutput="2" type="unsigned int" value="4096"/>
+    </Parameter>
+</Plugins>

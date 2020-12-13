@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>显示组件</CN_Name>
+        <ID>{a1696b8e-dd7c-4c79-ab28-61fe80bb05c7}</ID>
+        <Name>display</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/algoXml</Path>
+        <Time>Tue Sep 29 19:54:32 2020 GMT</Time>
+        <callFunction>show_wave</callFunction>
+    </Information>
+    <Description>波形显示组件波形显示组件波形显示组件波形显示组件波形显示组件波形显示组件波形显示组件波形显示组件波形显示组件</Description>
+    <Parameter>
+        <data_0 isoutput="0" describe="输入端口" type="MSG_Q_ID" value=""/>
+    </Parameter>
+</Plugins>

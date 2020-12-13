@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DDS>
+    <DCPS>
+        <IP>192.168.1.2</IP>
+        <port>123456</port>
+    </DCPS>
+    <Algo>
+        <count>3</count>
+        <EveAlgo>
+            <AlgoID>SIM{37396bdb-df29-406f-b5cc-3367c312a0e6}</AlgoID>
+            <nextAlgoID>DPC{dcf87e75-4f82-47d9-8db5-9da1f6bf77b3}</nextAlgoID>
+        </EveAlgo>
+        <EveAlgo>
+            <AlgoID>SLC{e3928ef2-8e24-4c91-95af-b0ccd9d20d71}</AlgoID>
+            <nextAlgoID>MTD{7589ccfb-dc00-4ae8-be1f-3fdbca76ab5c}</nextAlgoID>
+        </EveAlgo>
+        <EveAlgo>
+            <AlgoID>CFAR{6a2e1478-6ad5-4018-9166-15112313a87f}</AlgoID>
+            <nextAlgoID>SDAE{26ddd8a6-e71c-4a71-8d42-529402386f45}</nextAlgoID>
+        </EveAlgo>
+    </Algo>
+</DDS>

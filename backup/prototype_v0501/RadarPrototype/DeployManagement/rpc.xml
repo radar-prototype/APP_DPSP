@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RPC>
+    <node>
+        <server-IP>127.0.0.1</server-IP>
+        <from-path>../Main/</from-path>
+        <to-path>/home/wangyuan/OpenDDS-3.13.3/DevGuideExamples/DCPS/</to-path>
+        <shell-pkg>FDPC2.sh</shell-pkg>
+    </node>
+</RPC>

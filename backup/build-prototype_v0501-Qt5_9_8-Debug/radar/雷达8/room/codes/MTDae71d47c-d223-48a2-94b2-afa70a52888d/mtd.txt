@@ -1,0 +1,8 @@
+	vsip_mview_f *mtd = vsip_mcreate_f(1, SampleNumber, VSIP_ROW, VSIP_MEM_CONST);
+    vsip_cmview_f *buff = vsip_cmcreate_f(PulseNumber, 1, VSIP_ROW, VSIP_MEM_NONE);
+    vsip_cmview_f *buff_fft = vsip_cmcreate_f(PulseNumber, 1, VSIP_ROW, VSIP_MEM_NONE);
+    vsip_fftm_f *buff_plan = vsip_ccfftmop_create_f(PulseNumber, 1, 1, VSIP_FFT_FWD, VSIP_COL, 1, VSIP_ALG_NOISE);
+    vsip_mview_f *win = vsip_mcreate_f(PulseNumber, 1, VSIP_ROW, VSIP_MEM_CONST);
+    GenHamWindow(PulseNumber, win);
+    vsip_scalar_f max = VSIP_MIN_SCALAR_F;
+    vsip_scalar_f tempm = 0.;

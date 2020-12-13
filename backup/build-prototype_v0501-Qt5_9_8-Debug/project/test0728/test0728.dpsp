@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-root>
+    <information>
+        <name>test0728</name>
+        <id>{eb7f6419-c9f8-452c-b515-16cf3a074398}</id>
+    </information>
+    <components>
+        <ecm id="ecm62c5118f-46b4-4bce-85bd-3ab340dce957" name="对抗2"/>
+        <object id="object4da69f1c-97be-4508-a7a0-43a063f3311b" name="目标1"/>
+        <radar id="radar0f8a74f0-14d3-4dfa-bb66-c3fc03edfb7b" name="radar2"/>
+    </components>
+</project-root>

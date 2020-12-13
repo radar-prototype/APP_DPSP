@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components width="5000" height="5000">
+    <Arrs>
+        <arrow id="{ebd80b43-d875-48d8-9dbe-7260ec03a180}" end_item_id="{6a2e1478-6ad5-4018-9166-15112313a87f}" start_item_id="{7589ccfb-dc00-4ae8-be1f-3fdbca76ab5c}">
+            <color>#000000</color>
+            <start_port>{b74d481f-ee2d-4aac-85d2-b60a240b68ee}</start_port>
+            <end_port>{47db96a0-2520-42f3-b0ab-86e7db2ecb04}</end_port>
+        </arrow>
+        <arrow id="{25ffc71d-3f5e-45e7-b6e0-6710fcd487de}" end_item_id="{26ddd8a6-e71c-4a71-8d42-529402386f45}" start_item_id="{7589ccfb-dc00-4ae8-be1f-3fdbca76ab5c}">
+            <color>#000000</color>
+            <start_port>{ac6452ba-0633-4ae0-a425-d07c3c3e80f9}</start_port>
+            <end_port>{faf84a85-8358-43cc-9093-2619d6314681}</end_port>
+        </arrow>
+        <arrow id="{e8916ed5-cc9d-4650-a550-6727962f6e7d}" end_item_id="{26ddd8a6-e71c-4a71-8d42-529402386f45}" start_item_id="{6a2e1478-6ad5-4018-9166-15112313a87f}">
+            <color>#000000</color>
+            <start_port>{38e81382-f2c9-4ee0-addd-03982fd85dd0}</start_port>
+            <end_port>{7628cd95-a994-4d49-a17f-aee184d8ea50}</end_port>
+        </arrow>
+        <arrow id="{dd25490f-3254-45f7-a1c1-de7de7e0d6de}" end_item_id="{dcf87e75-4f82-47d9-8db5-9da1f6bf77b3}" start_item_id="{37396bdb-df29-406f-b5cc-3367c312a0e6}">
+            <color>#000000</color>
+            <start_port>{9f80507d-64bb-45d0-ae26-bc5ec5b7117f}</start_port>
+            <end_port>{ed691d67-4f38-4012-8c6e-9812d151610a}</end_port>
+        </arrow>
+        <arrow id="{b5b341c4-2fa0-46e0-97ad-2b4e8b573dbe}" end_item_id="{e3928ef2-8e24-4c91-95af-b0ccd9d20d71}" start_item_id="{dcf87e75-4f82-47d9-8db5-9da1f6bf77b3}">
+            <color>#000000</color>
+            <start_port>{54faf4bf-3759-47bf-b33d-851fadcb9e18}</start_port>
+            <end_port>{ca601754-1100-495a-82a7-9e9d99c13b13}</end_port>
+        </arrow>
+        <arrow id="{72314615-f21d-42cf-a175-ea9b11af2f12}" end_item_id="{7589ccfb-dc00-4ae8-be1f-3fdbca76ab5c}" start_item_id="{e3928ef2-8e24-4c91-95af-b0ccd9d20d71}">
+            <color>#000000</color>
+            <start_port>{09d9d834-e6a7-4ec6-aef4-f819bd8333ef}</start_port>
+            <end_port>{aafc9f29-18ef-483f-b180-a98f3695ddd0}</end_port>
+        </arrow>
+        <arrow id="{7891e995-2b53-4d31-bf9f-977c0b533c18}" end_item_id="{72b294f4-26a8-4552-bd7a-593784026345}" start_item_id="{26ddd8a6-e71c-4a71-8d42-529402386f45}">
+            <color>#000000</color>
+            <start_port>{85a96c24-7c23-4c4b-b24d-22ec238d8fc6}</start_port>
+            <end_port>{e76a2636-0077-474f-afcf-733030c046a4}</end_port>
+        </arrow>
+    </Arrs>
+    <Items>
+        <SIM id="{37396bdb-df29-406f-b5cc-3367c312a0e6}" pos_y="2525" pos_x="1757">
+            <color>#a0a0a4</color>
+            <call>Simulate</call>
+            <port port_type="1" dataType="" name="SIM" isoutput="0">{9f19abea-647a-4d74-9283-3b0f0f376231}</port>
+            <port port_type="2" dataType="" name="仿真组件" isoutput="0">{dccda0ff-8c6c-43d4-85b7-30f815ca27ee}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgSimQ" isoutput="1">{9f80507d-64bb-45d0-ae26-bc5ec5b7117f}</port>
+        </SIM>
+        <MTD id="{7589ccfb-dc00-4ae8-be1f-3fdbca76ab5c}" pos_y="2499" pos_x="2383">
+            <color>#a0a0a4</color>
+            <call>TargetDetection</call>
+            <port port_type="1" dataType="" name="MTD" isoutput="0">{729d1ecb-79e2-4623-9750-54f380a7921f}</port>
+            <port port_type="2" dataType="" name="动目标检测" isoutput="0">{56523d34-4edb-4b65-a6c5-802a2db51c5d}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgCSAQ" isoutput="0">{aafc9f29-18ef-483f-b180-a98f3695ddd0}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgSend1" isoutput="1">{b74d481f-ee2d-4aac-85d2-b60a240b68ee}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgSend2" isoutput="1">{ac6452ba-0633-4ae0-a425-d07c3c3e80f9}</port>
+        </MTD>
+        <DPC id="{dcf87e75-4f82-47d9-8db5-9da1f6bf77b3}" pos_y="2374" pos_x="1963">
+            <color>#a0a0a4</color>
+            <call>PulseCompress</call>
+            <port port_type="1" dataType="" name="DPC" isoutput="0">{b93ecf4c-4a87-4d7a-9646-6e0a9fdb89f8}</port>
+            <port port_type="2" dataType="" name="脉冲压缩" isoutput="0">{8892036e-e9b8-42a1-b7f5-0b982760dd47}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgDatQ" isoutput="1">{54faf4bf-3759-47bf-b33d-851fadcb9e18}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgSimQ" isoutput="0">{ed691d67-4f38-4012-8c6e-9812d151610a}</port>
+        </DPC>
+        <SDAE id="{26ddd8a6-e71c-4a71-8d42-529402386f45}" pos_y="2538" pos_x="2729">
+            <color>#a0a0a4</color>
+            <call>SDAE</call>
+            <port port_type="1" dataType="" name="SDAE" isoutput="0">{f2020086-f604-417a-9071-baa82360327e}</port>
+            <port port_type="2" dataType="" name="和差测角" isoutput="0">{5a14c965-378e-447b-b9e6-7f40eb9fd513}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgSDAEQ" isoutput="0">{7628cd95-a994-4d49-a17f-aee184d8ea50}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgSend2" isoutput="0">{faf84a85-8358-43cc-9093-2619d6314681}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="outputport" isoutput="1">{85a96c24-7c23-4c4b-b24d-22ec238d8fc6}</port>
+        </SDAE>
+        <CFAR id="{6a2e1478-6ad5-4018-9166-15112313a87f}" pos_y="2373" pos_x="2551">
+            <color>#a0a0a4</color>
+            <call>CFAR</call>
+            <port port_type="1" dataType="" name="CFAR" isoutput="0">{32e7226f-9df1-4ac2-b2a8-bd2a7b543040}</port>
+            <port port_type="2" dataType="" name="恒虚警率" isoutput="0">{8e102ecd-ba29-4a83-b235-1589621563ca}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgSDAEQ" isoutput="1">{38e81382-f2c9-4ee0-addd-03982fd85dd0}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgSend1" isoutput="0">{47db96a0-2520-42f3-b0ab-86e7db2ecb04}</port>
+        </CFAR>
+        <display id="{72b294f4-26a8-4552-bd7a-593784026345}" pos_y="2446" pos_x="2949">
+            <color>#a0a0a4</color>
+            <call>show_wave</call>
+            <port port_type="1" dataType="" name="display" isoutput="0">{7504ba2d-9813-48c0-a39e-32c418f7cd13}</port>
+            <port port_type="2" dataType="" name="显示组件" isoutput="0">{7cdf318b-08ce-4c60-9a37-112920960fb0}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="data_0" isoutput="0">{e76a2636-0077-474f-afcf-733030c046a4}</port>
+        </display>
+        <SLC id="{e3928ef2-8e24-4c91-95af-b0ccd9d20d71}" pos_y="2435" pos_x="2185">
+            <color>#a0a0a4</color>
+            <call>SidelobeCanceller</call>
+            <port port_type="1" dataType="" name="SLC" isoutput="0">{793d1459-492f-447f-b289-4b11c07c961b}</port>
+            <port port_type="2" dataType="" name="副瓣对消" isoutput="0">{b1591cd9-fbed-4840-8c0c-16244b8569bf}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgCSAQ" isoutput="1">{09d9d834-e6a7-4ec6-aef4-f819bd8333ef}</port>
+            <port port_type="0" dataType="MSG_Q_ID" name="gMsgDatQ" isoutput="0">{ca601754-1100-495a-82a7-9e9d99c13b13}</port>
+        </SLC>
+    </Items>
+</components>

@@ -1,0 +1,22 @@
+void *[COMPONENT_NAME]_thread(void *arg)
+{
+	rspl_thread_param tp_[COMP_THIS_LOWERCASE], tp_[COMP_DAT_LOWERCASE];
+	pthread_t tidp;
+	int thread_id = *((int *)arg);
+	RSPL_[COMP_CAPITALIZE]_ENV *pEnv;
+
+	tidp = pthread_self();
+
+	while (1)
+	{
+		msgQReceive(&gMsg[COMP_TITLE_CASE]Q, (char *)&tp_[COMP_THIS_LOWERCASE], sizeof(rspl_thread_param), 0);
+		pEnv = (RSPL_[COMP_CAPITALIZE]_ENV *)tp_[COMP_THIS_LOWERCASE].pEnv;
+		[RSPL_COMP_UNDERLINE_NAME_FUNCTION_CALL]
+
+		tp_[COMP_DAT_LOWERCASE].pEnv = NULL;
+		tp_[COMP_DAT_LOWERCASE].pIn = (char *)tp_[COMP_DAT_LOWERCASE].pIn;
+		tp_[COMP_DAT_LOWERCASE].pOut = NULL;
+		msgQSendNext(&gMsg[COMP_TITLE_CASE]Q, (char *)&tp_[COMP_DAT_LOWERCASE], sizeof(rspl_thread_param), 0, 1, &param_[COMP_THIS_LOWERCASE], &param_[COMP_NEXT_LOWERCASE]);
+		printf("dpc thread_id = %d\n", thread_id);
+	}
+}

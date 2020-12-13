@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>测试</CN_Name>
+        <ID>{86cefa44-8c1c-43ab-83d0-db9e91220d80}</ID>
+        <Name>TEST</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/雷达3/room/algoXml</Path>
+        <Time>Wed Sep 30 11:01:18 2020</Time>
+        <callFunction>test_func</callFunction>
+    </Information>
+    <Description>这个是打包成的子模型，供测试使用。</Description>
+    <Parameter/>
+</Plugins>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugins>
+    <Information>
+        <CN_Name>测试</CN_Name>
+        <ID>{11e68690-b8c6-4abc-a194-60db5e30c4ba}</ID>
+        <Name>TEST</Name>
+        <Path>D:/Git/Digital-Prototype/build-prototype_v0501-Qt5_9_8-Debug/radar/radar1/room/algoXml</Path>
+        <Time>Sat Nov 14 10:21:52 2020</Time>
+        <callFunction>test_func</callFunction>
+    </Information>
+    <Description>这个是打包成的子模型，供测试使用。</Description>
+    <Parameter>
+        <cMainBeamCnt describe="主波束数量" type="int" isoutput="" value="4"/>
+        <cSideBeamCnt describe="侧波束数量" type="int" isoutput="" value="1"/>
+        <filename describe="参数描述" type="char**" isoutput="" value="files/FLM_25.6_5_2048.txt,files/FLM_25.6_5_1024.txt,files/FLM_25.6_10_2048.txt,files/FLM_25.6_5_1024.txt"/>
+        <gMsgDatQ describe="输出消息队列" type="MSG_Q_ID" isoutput="" value=""/>
+        <gMsgSDAEQ describe="发送给和差测角的输出队列" type="MSG_Q_ID" isoutput="" value=""/>
+        <gMsgSend1 describe="数据接收队列" type="MSG_Q_ID" isoutput="0" value=""/>
+        <gMsgSimQ describe="仿真对象的数据列表" type="MSG_Q_ID" isoutput="1" value=""/>
+        <num_filter describe="滤波器数量" type="int" isoutput="" value="4"/>
+        <num_thread describe="线程数量" type="int" isoutput="" value="1"/>
+        <sCPINum describe="CPI数量" type="int" isoutput="" value="32"/>
+        <sMaxRgeCell describe="最大单元范围" type="int" isoutput="" value="4096"/>
+    </Parameter>
+</Plugins>
